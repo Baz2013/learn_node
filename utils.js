@@ -50,11 +50,15 @@ function changeCase(str, type){
     }
 }
 
+function repeatStr(str, count){
+    return str;
+}
 
 let myJS = {
     sum: sum,
     trim: trim,
     changeCase: changeCase,
+    repeatStr: repeatStr,
 }
 
 module.exports = myJS;
