@@ -75,6 +75,16 @@ function replaceAll(str, AFindText, ARepText){
     return str.replace(reRegExp,ARepText);
 }
 
+/**
+ * 替换*###
+ * @param {*} str 字符串
+ * @param {*} regArr 字符格式
+ * @param {*} type 替换方式
+ * @param {*} ARepText 替换的字符串(默认*)
+ */
+function replaceStr(str, regArr, type, ARepText){
+    return str;
+}
 
 let myJS = {
     sum: sum,
@@ -82,6 +92,7 @@ let myJS = {
     changeCase: changeCase,
     repeatStr: repeatStr,
     replaceAll: replaceAll,
+    replaceStr: replaceStr,
 }
 
 module.exports = myJS;

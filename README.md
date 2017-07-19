@@ -12,3 +12,6 @@ npm install
 ```
 npm test
 ```
+
+## 学习笔记
+[JavaScript基本](./doc/js_basic.md)

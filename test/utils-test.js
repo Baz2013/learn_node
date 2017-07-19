@@ -7,6 +7,7 @@ trim = myjs.trim;
 changeCase = myjs.changeCase;
 repeatStr = myjs.repeatStr;
 replaceAll = myjs.replaceAll;
+replaceStr = myjs.replaceStr;
 
 describe('#hello.js', () => {
 
