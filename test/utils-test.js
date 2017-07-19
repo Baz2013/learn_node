@@ -1,0 +1,39 @@
+const assert = require('assert');
+
+const myjs = require('../utils');
+
+sum = myjs.sum
+trim = myjs.trim
+
+describe('#hello.js', () => {
+
+    describe('#sum()', () => {
+        it('sum() should return 0', () => {
+            assert.strictEqual(sum(), 0);
+        });
+
+        it('sum(1) should return 1', () => {
+            assert.strictEqual(sum(1), 1);
+        });
+
+        it('sum(1, 2) should return 3', () => {
+            assert.strictEqual(sum(1, 2), 3);
+        });
+
+        it('sum(1, 2, 3) should return 6', () => {
+            assert.strictEqual(sum(1, 2, 3), 6);
+        });
+    });
+
+    describe('#trim()', () => {
+        it("trim(' abcd  ff  ', 1) should return abcdff", () => {
+            assert.strictEqual(trim(' abcd  ff  ', 1), 'abcdff') 
+        });
+        it("trim(' abcd  ff  ', 5) should return  abcd  ff  ", () => {
+            assert.strictEqual(trim(' abcd  ff  ', 5), ' abcd  ff  ') 
+        });
+        it("trim(' abcd  ff  ', 2) should return abcd  ff", () => {
+            assert.strictEqual(trim(' abcd  ff  ', 2), 'abcd  ff') 
+        });
+    })
+});
