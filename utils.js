@@ -1,3 +1,8 @@
+
+/*
+  一些常用的函数实现
+*/
+
 function sum(...rest) {
     var sum = 0;
     for (let n of rest) {
