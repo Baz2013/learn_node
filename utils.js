@@ -1,6 +1,6 @@
 
 /*
-  一些常用的函数实现
+  一些常用的工具函数实现
 */
 
 function sum(...rest) {
@@ -27,10 +27,29 @@ function trim(str, type){
     }
 }
 
+/**
+ * 字母大小写转换
+ * @param {*} str 原始字符串
+ * @param {*} type 1-首字母大写 2-首字母小写 3-大小写转换 4-全部大写 5-全部小写
+ */
+function changeCase(str, type){
+    switch(type){
+        case 1: return str.replace(/^(\w)(\w+)/, (v,v1,v2) => {
+            return v1.toUpperCase() + v2.toLowerCase();
+        }); 
+        case 2: return str;
+        case 3: return str;
+        case 4: return str;
+        case 5: return str;
+        default: return str;               
+    }
+}
+
 
 let myJS = {
-    sum:sum,
-    trim:trim,
+    sum: sum,
+    trim: trim,
+    changeCase: changeCase,
 }
 
 module.exports = myJS;
