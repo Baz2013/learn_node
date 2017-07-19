@@ -6,6 +6,7 @@ sum = myjs.sum;
 trim = myjs.trim;
 changeCase = myjs.changeCase;
 repeatStr = myjs.repeatStr;
+replaceAll = myjs.replaceAll;
 
 describe('#hello.js', () => {
 
@@ -78,6 +79,12 @@ describe('#hello.js', () => {
         });
         it("repeatStr('abc', 2) shoud return abcabcabc", () =>{
             assert.strictEqual(repeatStr('abc', 2), 'abcabcabc');
+        });
+    });
+
+    describe('#replaceAll()', () => {
+        it("replaceAll('abc3456zabcdGH$@','abc','OOO') should return OOO3456zOOOdGH$@", () => {
+            assert.strictEqual(replaceAll('abc3456zabcdGH$@','abc','OOO'), 'OOO3456zOOOdGH$@');
         });
     });
 

@@ -64,11 +64,24 @@ function repeatStr(str, count){
     return res;
 }
 
+/**
+ * 字符串替换
+ * @param {*} str 
+ * @param {*} AFindText 
+ * @param {*} ARepText 
+ */
+function replaceAll(str, AFindText, ARepText){
+    reRegExp = new RegExp(AFindText, "g");
+    return str.replace(reRegExp,ARepText);
+}
+
+
 let myJS = {
     sum: sum,
     trim: trim,
     changeCase: changeCase,
     repeatStr: repeatStr,
+    replaceAll: replaceAll,
 }
 
 module.exports = myJS;
