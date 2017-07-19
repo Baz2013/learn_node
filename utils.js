@@ -50,8 +50,18 @@ function changeCase(str, type){
     }
 }
 
+/**
+ * 字符串循环复制
+ * @param {*} str 
+ * @param {*} count 复制次数
+ */
 function repeatStr(str, count){
-    return str;
+    var res = str;
+    for (let i = 0; i < count; i++){
+        res += str;
+    }
+
+    return res;
 }
 
 let myJS = {
