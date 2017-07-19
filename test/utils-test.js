@@ -51,8 +51,8 @@ describe('#hello.js', () => {
         it("changeCase('ABCD', 2) shoud return aBCD", () => {
             assert.strictEqual(changeCase('ABCD', 2), 'aBCD');
         });
-        it("changeCase('AbcD', 3) shoud return aBCd", () => {
-            assert.strictEqual(changeCase('AbcD', 3), 'aBCd');
+        it("changeCase('abCD', 3) shoud return ABcd", () => {
+            assert.strictEqual(changeCase('abCD', 3), 'ABcd');
         });
         it("changeCase('aBcd', 4) shoud return ABCD", () => {
             assert.strictEqual(changeCase('aBcd', 4), 'ABCD');

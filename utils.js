@@ -35,12 +35,17 @@ function trim(str, type){
 function changeCase(str, type){
     switch(type){
         case 1: return str.replace(/^(\w)(\w+)/, (v,v1,v2) => {
+            //v 是原始字符串,即str
             return v1.toUpperCase() + v2.toLowerCase();
         }); 
-        case 2: return str;
-        case 3: return str;
-        case 4: return str;
-        case 5: return str;
+        case 2: return str.replace(/^(\w)(\w+)/, (v,v1,v2) => {
+            return v1.toLowerCase() + v2.toUpperCase();
+        });
+        case 3: return str.replace(/^([a-z]+)([A-Z]+)/,(v,v1,v2) => {
+            return v1.toUpperCase() + v2.toLowerCase();
+        });
+        case 4: return str.toUpperCase();
+        case 5: return str.toLowerCase();
         default: return str;               
     }
 }
