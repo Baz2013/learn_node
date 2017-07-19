@@ -35,5 +35,11 @@ describe('#hello.js', () => {
         it("trim(' abcd  ff  ', 2) should return abcd  ff", () => {
             assert.strictEqual(trim(' abcd  ff  ', 2), 'abcd  ff') 
         });
+        it("trim(' abcd  ff  ', 3) should return abcd  ff  ", () => {
+            assert.strictEqual(trim(' abcd  ff  ', 3), 'abcd  ff  ') 
+        });
+        it("trim(' abcd  ff  ', 4) should return  abcd  ff", () => {
+            assert.strictEqual(trim(' abcd  ff  ', 4), ' abcd  ff') 
+        });
     })
 });
