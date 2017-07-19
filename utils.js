@@ -12,7 +12,11 @@ function sum(...rest) {
 };
 
 
-
+/**
+ * 字符串去除空格
+ * @param {*} str 
+ * @param {*} type 1-所有空格 2-前后空格 3-前空格 4-后空格
+ */
 function trim(str, type){
     switch (type){
         case 1: return str.replace(/\s+/g,"");
