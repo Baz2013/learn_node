@@ -83,6 +83,14 @@ function replaceAll(str, AFindText, ARepText){
  * @param {*} ARepText 替换的字符串(默认*)
  */
 function replaceStr(str, regArr, type, ARepText){
+    var regtext = '';
+    var Reg = null;
+    var replaceText = ARepText || '*';
+
+    if (3 == regArr.length && 0 == type ){
+        
+    }
+
     return str;
 }
 

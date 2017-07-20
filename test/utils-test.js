@@ -8,6 +8,7 @@ changeCase = myjs.changeCase;
 repeatStr = myjs.repeatStr;
 replaceAll = myjs.replaceAll;
 replaceStr = myjs.replaceStr;
+replaceStr = myjs.replaceStr;
 
 describe('#hello.js', () => {
 
@@ -86,6 +87,12 @@ describe('#hello.js', () => {
     describe('#replaceAll()', () => {
         it("replaceAll('abc3456zabcdGH$@','abc','OOO') should return OOO3456zOOOdGH$@", () => {
             assert.strictEqual(replaceAll('abc3456zabcdGH$@','abc','OOO'), 'OOO3456zOOOdGH$@');
+        });
+    });
+
+    describe('#replaceStr()', () => {
+        it("replaceStr('18819322663',[3,5,3],0) shoud return 188*****663", () =>{
+            assert.strictEqual(replaceStr('18819322663',[3,5,3],0), '188*****663');
         });
     });
 
