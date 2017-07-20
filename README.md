@@ -14,4 +14,9 @@ npm test
 ```
 
 ## 学习笔记
-[JavaScript基本](./doc/js_basic.md)
+[JavaScript基础](./doc/js_basic.md)
+
+[常用命令](./doc/command.md)
+
+## 参考
+[npm-scripts](https://docs.npmjs.com/misc/scripts?spm=5176.100239.blogcont4220.9.0AwIOD)
