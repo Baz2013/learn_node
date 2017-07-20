@@ -13,10 +13,14 @@ npm install
 npm test
 ```
 
-## 覆盖率
+## 覆盖率 istanbul
+这个软件以土耳其最大城市伊斯坦布尔命名，因为土耳其地毯世界闻名，而地毯是用来覆盖的。
 ```
 ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha test/utils-test.js
 ```
+
+## 断言库
+should.js
 
 ## 学习笔记
 [JavaScript基础](./doc/js_basic.md)
@@ -30,9 +34,11 @@ npm test
 
 [node.js单元测试:workflow](https://yq.aliyun.com/articles/4220)
 
+[代码覆盖率工具Istanbul入门教程](http://www.ruanyifeng.com/blog/2015/06/istanbul.html)
+
 ## 错误及解决
 使用istanbul执行覆盖测试的时候报错
-```
+```shell
 $ ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/utils-test.js
 No coverage information was collected, exit without writing coverage information
 E:\GIT\learn_node\node_modules\.bin\_mocha:2

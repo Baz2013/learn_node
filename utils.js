@@ -56,7 +56,7 @@ function changeCase(str, type){
  * @param {*} count 复制次数
  */
 function repeatStr(str, count){
-    var res = str;
+    var res = '';
     for (let i = 0; i < count; i++){
         res += str;
     }
@@ -88,7 +88,10 @@ function replaceStr(str, regArr, type, ARepText){
     var replaceText = ARepText || '*';
 
     if (3 == regArr.length && 0 == type ){
-        
+        regtext = '(\\w{' + regArr[0] + '})\\w{' + regArr[1] + '}(\\w{' + regArr[2] + '})';
+        Reg = new RegExp(regtext);
+        var replaceCount = repeatStr(replaceText, regArr[1]);
+        return str.replace(Reg, '$1' + replaceCount + '$2');
     }
 
     return str;

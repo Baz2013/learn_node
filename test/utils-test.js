@@ -73,14 +73,14 @@ describe('#hello.js', () => {
     });
 
     describe('#repeatStr()', () => {
-        it("repeatStr('abc', 0) shoud return abc", () =>{
-            assert.strictEqual(repeatStr('abc', 0), 'abc');
+        it("repeatStr('abc', 0) shoud return \'\'", () =>{
+            assert.strictEqual(repeatStr('abc', 0), '');
         });
-        it("repeatStr('abc', 1) shoud return abcabc", () =>{
-            assert.strictEqual(repeatStr('abc', 1), 'abcabc');
+        it("repeatStr('abc', 1) shoud return abc", () =>{
+            assert.strictEqual(repeatStr('abc', 1), 'abc');
         });
-        it("repeatStr('abc', 2) shoud return abcabcabc", () =>{
-            assert.strictEqual(repeatStr('abc', 2), 'abcabcabc');
+        it("repeatStr('abc', 2) shoud return abcabc", () =>{
+            assert.strictEqual(repeatStr('abc', 2), 'abcabc');
         });
     });
 

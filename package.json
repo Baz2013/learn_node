@@ -5,7 +5,7 @@
   "main": "hello.js",
   "scripts": {
     "test": "mocha",
-    "cov": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha test/*-test.js"
+    "cov": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports test/*-test.js --timeout 20000"
   },
   "keywords": [
     "mocha",
