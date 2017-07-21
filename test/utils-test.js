@@ -9,6 +9,7 @@ repeatStr = myjs.repeatStr;
 replaceAll = myjs.replaceAll;
 replaceStr = myjs.replaceStr;
 replaceStr = myjs.replaceStr;
+checkType = myjs.checkType;
 
 describe('#hello.js', () => {
 
@@ -105,6 +106,20 @@ describe('#hello.js', () => {
         });
         it("replaceStr('1asd88465asdwqe3',[5],1,'+') shoud return 1asd88465as+++++", () =>{
             assert.strictEqual(replaceStr('1asd88465asdwqe3',[5],1,'+'), '1asd88465as+++++');
+        });
+    });
+    describe('#checkType()', () => {
+        it("checkType('165226226326','phone') shoud return false", () =>{
+            assert.strictEqual(checkType('165226226326','phone'), false);
+        });
+        it("checkType('sd4313@163.com','mail') shoud return true", () =>{
+            assert.strictEqual(checkType('sd4313@163.com','mail'), true);
+        });
+        it("checkType('sd.4313bing@163.com','mail') shoud return true", () =>{
+            assert.strictEqual(checkType('sd.4313bing@163.com','mail'), true);
+        });
+        it("checkType('sd4313163.com','mail') shoud return false", () =>{
+            assert.strictEqual(checkType('sd4313163.com','mail'), false);
         });
     });
 

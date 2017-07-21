@@ -114,6 +114,25 @@ function replaceStr(str, regArr, type, ARepText){
     }
 }
 
+/**
+ * 检测字符串
+ * @param {*} str 
+ * @param {*} type 
+ */
+function checkType(str, type){
+    switch(type){
+        case 'email': return /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(str);
+        case 'phone': return /^1[3|4|5|7|8][0-9]{9}$/.test(str);
+        case 'tel': return true;
+        case 'number': return true;
+        case 'english': return true;
+        case 'chinese': return true;
+        case 'lower': return true;
+        case 'upper': return true;
+        default: return true;
+    }
+}
+
 let myJS = {
     sum: sum,
     trim: trim,
@@ -121,6 +140,7 @@ let myJS = {
     repeatStr: repeatStr,
     replaceAll: replaceAll,
     replaceStr: replaceStr,
+    checkType: checkType,
 }
 
 module.exports = myJS;

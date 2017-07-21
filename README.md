@@ -27,7 +27,7 @@ should.js
 
 [常用命令](./doc/command.md)
 
-## 参考
+## 参考:
 [node.js单元测试:我要写测试](https://yq.aliyun.com/articles/7699?spm=5176.100239.blogcont4220.12.0AwIOD)
 
 [npm-scripts](https://docs.npmjs.com/misc/scripts?spm=5176.100239.blogcont4220.9.0AwIOD)
@@ -35,6 +35,8 @@ should.js
 [node.js单元测试:workflow](https://yq.aliyun.com/articles/4220)
 
 [代码覆盖率工具Istanbul入门教程](http://www.ruanyifeng.com/blog/2015/06/istanbul.html)
+
+[正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
 
 ## 错误及解决
 #### 使用istanbul执行覆盖率测试的时候报错
