@@ -37,7 +37,7 @@ should.js
 [代码覆盖率工具Istanbul入门教程](http://www.ruanyifeng.com/blog/2015/06/istanbul.html)
 
 ## 错误及解决
-使用istanbul执行覆盖测试的时候报错
+#### 使用istanbul执行覆盖率测试的时候报错
 ```shell
 $ ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/utils-test.js
 No coverage information was collected, exit without writing coverage information

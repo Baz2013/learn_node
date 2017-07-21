@@ -70,6 +70,9 @@ describe('#hello.js', () => {
         it("changeCase('ABCD#$12', 2) shoud return aBCD#$12", () => {
             assert.strictEqual(changeCase('ABCD#$12', 2), 'aBCD#$12');
         });
+        it("changeCase('ABCD#$12', 6) shoud return ABCD#$12", () => {
+            assert.strictEqual(changeCase('ABCD#$12', 6), 'ABCD#$12');
+        });
     });
 
     describe('#repeatStr()', () => {
@@ -93,6 +96,15 @@ describe('#hello.js', () => {
     describe('#replaceStr()', () => {
         it("replaceStr('18819322663',[3,5,3],0) shoud return 188*****663", () =>{
             assert.strictEqual(replaceStr('18819322663',[3,5,3],0), '188*****663');
+        });
+        it("replaceStr('18819322663',[3,5,3],1) shoud return ***19322***", () =>{
+            assert.strictEqual(replaceStr('18819322663',[3,5,3],1), '***19322***');
+        });
+        it("replaceStr('1asd88465asdwqe3',[5],0) shoud return *****8465asdwqe3", () =>{
+            assert.strictEqual(replaceStr('1asd88465asdwqe3',[5],0), '*****8465asdwqe3');
+        });
+        it("replaceStr('1asd88465asdwqe3',[5],1,'+') shoud return 1asd88465as+++++", () =>{
+            assert.strictEqual(replaceStr('1asd88465asdwqe3',[5],1,'+'), '1asd88465as+++++');
         });
     });
 

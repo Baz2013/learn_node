@@ -87,14 +87,31 @@ function replaceStr(str, regArr, type, ARepText){
     var Reg = null;
     var replaceText = ARepText || '*';
 
-    if (3 == regArr.length && 0 == type ){
+    if (3 === regArr.length && 0 === type ){
         regtext = '(\\w{' + regArr[0] + '})\\w{' + regArr[1] + '}(\\w{' + regArr[2] + '})';
         Reg = new RegExp(regtext);
-        var replaceCount = repeatStr(replaceText, regArr[1]);
+        let replaceCount = repeatStr(replaceText, regArr[1]);
         return str.replace(Reg, '$1' + replaceCount + '$2');
     }
-
-    return str;
+    else if (3 === regArr.length && 1 === type){
+        regtext = '\\w{' + regArr[0] + '}(\\w{' + regArr[1] + '})\\w{' + regArr[2] + '}';
+        Reg = new RegExp(regtext);
+        let replaceCount1 = repeatStr(replaceText, regArr[0]);
+        let replaceCount2 = repeatStr(replaceText, regArr[2]);
+        return str.replace(Reg, replaceCount1 + '$1' + replaceCount1);
+    }
+    else if(1 === regArr.length && 0 === type){
+        regtext = '(^\\w{' + regArr[0] + '})';
+        Reg = new RegExp(regtext);
+        let replaceCount = repeatStr(replaceText, regArr[0]);
+        return str.replace(Reg, replaceCount);
+    }
+    else if ( 1 === regArr.length && 1 === type){
+        regtext = '(\\w{' + regArr[0] + '}$)';
+        Reg = new RegExp(regtext);
+        let replaceCount = repeatStr(replaceText, regArr[0]);
+        return str.replace(Reg, replaceCount);
+    }
 }
 
 let myJS = {
