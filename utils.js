@@ -121,7 +121,7 @@ function replaceStr(str, regArr, type, ARepText){
  */
 function checkType(str, type){
     switch(type){
-        case 'email': return /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(str);
+        case 'email': return /^\w+([-+.]\w+)*\@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(str);
         case 'phone': return /^1[3|4|5|7|8][0-9]{9}$/.test(str);
         case 'tel': return true;
         case 'number': return true;

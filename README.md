@@ -28,6 +28,8 @@ should.js
 [常用命令](./doc/command.md)
 
 ## 参考:
+[ECMAScript 6 入门](http://es6.ruanyifeng.com/#docs/destructuring)
+
 [node.js单元测试:我要写测试](https://yq.aliyun.com/articles/7699?spm=5176.100239.blogcont4220.12.0AwIOD)
 
 [npm-scripts](https://docs.npmjs.com/misc/scripts?spm=5176.100239.blogcont4220.9.0AwIOD)
