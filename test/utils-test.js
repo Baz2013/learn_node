@@ -121,6 +121,18 @@ describe('#hello.js', () => {
         it("checkType('sd4313163.com','mail') shoud return false", () =>{
             assert.strictEqual(checkType('sd4313163.com','mail'), false);
         });
+        it("checkType('010-8837899','tel') shoud return true", () =>{
+            assert.strictEqual(checkType('010-8837899','phone'), true);
+        });
+        it("checkType('8837899','number') shoud return true", () =>{
+            assert.strictEqual(checkType('8837899','number'), true);
+        });
+        it("checkType('8837899a','number') shoud return false", () =>{
+            assert.strictEqual(checkType('8837899a','number'), false);
+        });
+        it("checkType('你好','chinese') shoud return true", () =>{
+            assert.strictEqual(checkType('你好','chinese'), true);
+        });
     });
 
 });
