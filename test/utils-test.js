@@ -10,6 +10,7 @@ replaceAll = myjs.replaceAll;
 replaceStr = myjs.replaceStr;
 replaceStr = myjs.replaceStr;
 checkType = myjs.checkType;
+checkPwd = myjs.checkPwd;
 
 describe('#hello.js', () => {
 
@@ -132,6 +133,18 @@ describe('#hello.js', () => {
         });
         it("checkType('你好','chinese') shoud return true", () =>{
             assert.strictEqual(checkType('你好','chinese'), true);
+        });
+    });
+
+    describe('#checkPwd()', () => {
+        it("checkPwd('abc') should return 0", () => {
+            assert.strictEqual(checkPwd('abc'), 0);
+        });
+        it("checkPwd('12asdASAD') should return 3", () => {
+            assert.strictEqual(checkPwd('12asdASAD'), 3);
+        });
+        it("checkPwd('12asd|abc|ASAD') should return 4", () => {
+            assert.strictEqual(checkPwd('12asd|abc|ASAD'), 4);
         });
     });
 

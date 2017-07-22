@@ -133,6 +133,31 @@ function checkType(str, type){
     }
 }
 
+/**
+ * 检测密码强度
+ * @param {*} str 
+ */
+function checkPwd(str){
+    let nowLv = 0;
+    if (str.length < 6){
+        return nowLv;
+    }
+    if (/[0-9]/.test(str)){
+        nowLv++;
+    }
+    if (/[a-z]/.test(str)){
+        nowLv++;
+    }
+    if (/[A-Z]/.test(str)){
+        nowLv++;
+    }
+    if (/[\.|-|_]/.test(str)){
+        nowLv++;
+    }
+
+    return nowLv;
+}
+
 let myJS = {
     sum: sum,
     trim: trim,
@@ -141,6 +166,7 @@ let myJS = {
     replaceAll: replaceAll,
     replaceStr: replaceStr,
     checkType: checkType,
+    checkPwd: checkPwd,
 }
 
 module.exports = myJS;
