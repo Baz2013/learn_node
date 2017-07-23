@@ -11,6 +11,7 @@ replaceStr = myjs.replaceStr;
 replaceStr = myjs.replaceStr;
 checkType = myjs.checkType;
 checkPwd = myjs.checkPwd;
+removeRepeat = myjs.removeRepeat;
 
 describe('#hello.js', () => {
 
@@ -145,6 +146,12 @@ describe('#hello.js', () => {
         });
         it("checkPwd('12asd|abc|ASAD') should return 4", () => {
             assert.strictEqual(checkPwd('12asd|abc|ASAD'), 4);
+        });
+    });
+
+    describe('#removeRepeat()', () => {
+        it("removeRepeat(['a', 'a', 'b', 'b', 'c']) should return ['a','b','c']", () => {
+            assert.deepEqual(removeRepeat(['a', 'a', 'b', 'b', 'c']), ['a', 'b', 'c']);
         });
     });
 

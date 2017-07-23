@@ -158,6 +158,18 @@ function checkPwd(str){
     return nowLv;
 }
 
+/**
+ * 数组去重:
+ * ES6新增的Set数据结构，类似于数组，但是里面的元素都是
+ * 唯一的，其构造函数可以接受一个数组作为参数
+ * ES6中Arrary新增了一个静态方法from，可以把类似数组的
+ * 对象转换为数组
+ * @param {*} arr 
+ */
+function removeRepeat(arr){
+    return Array.from(new Set(arr));
+}
+
 let myJS = {
     sum: sum,
     trim: trim,
@@ -167,6 +179,7 @@ let myJS = {
     replaceStr: replaceStr,
     checkType: checkType,
     checkPwd: checkPwd,
+    removeRepeat: removeRepeat,
 }
 
 module.exports = myJS;
