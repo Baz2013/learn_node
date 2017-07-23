@@ -170,6 +170,15 @@ function removeRepeat(arr){
     return Array.from(new Set(arr));
 }
 
+/**
+ * 数组顺序打乱
+ */
+function upsetArr(arr){
+    return arr.sort(() => {
+        return Math.random() - 0.5;
+    });
+}
+
 let myJS = {
     sum: sum,
     trim: trim,
