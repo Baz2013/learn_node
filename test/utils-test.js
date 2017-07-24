@@ -2,6 +2,8 @@ const assert = require('assert');
 
 const myjs = require('../utils');
 
+const shoud = require('should');
+
 sum = myjs.sum;
 trim = myjs.trim;
 changeCase = myjs.changeCase;
@@ -16,6 +18,7 @@ minArr = myjs.minArr;
 maxArr = myjs.maxArr;
 averageArr = myjs.averageArr;
 sumArr = myjs.sumArr;
+randomOne = myjs.randomOne;
 
 describe('#hello.js', () => {
 
@@ -180,6 +183,13 @@ describe('#hello.js', () => {
     describe('#averageArr()', () => {
         it("averageArr([3,9,19,1,4,6]) should return 7", () => {
             assert.strictEqual(averageArr([3,9,19,1,4,6]), 7);
+        });
+    });
+
+    describe('#randomOne()', () => {
+        it("randomOne([3,9,19,1,4,6]) should return 7", () => {
+            let t = randomOne([3,9,19,1,4,6]);
+            [3,9,19,1,4,6].should.containEql(t);
         });
     });
 

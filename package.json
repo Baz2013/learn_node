@@ -20,6 +20,7 @@
   "dependencies": {},
   "devDependencies": {
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "should": "^3.3.2"
   }
 }

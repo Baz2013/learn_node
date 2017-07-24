@@ -217,6 +217,10 @@ function averageArr(arr){
     return sum / arr.length;
 }
 
+function randomOne(arr){
+    return arr[Math.floor(Math.random()*arr.length)];
+}
+
 let myJS = {
     sum: sum,
     trim: trim,
@@ -231,6 +235,7 @@ let myJS = {
     minArr: minArr,
     sumArr: sumArr,
     averageArr: averageArr,
+    randomOne: randomOne,
 }
 
 module.exports = myJS;
