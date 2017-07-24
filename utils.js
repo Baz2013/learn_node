@@ -179,6 +179,22 @@ function upsetArr(arr){
     });
 }
 
+/**
+ * 数组最大值
+ * @param {*} arr 数值型数组
+ */
+function maxArr(arr){
+    return Math.max.apply(null, arr);
+}
+
+/**
+ * 数组最小值
+ * @param {*} arr 数值型数组
+ */
+function minArr(arr){
+    return Math.min.apply(null, arr);
+}
+
 let myJS = {
     sum: sum,
     trim: trim,
@@ -189,6 +205,8 @@ let myJS = {
     checkType: checkType,
     checkPwd: checkPwd,
     removeRepeat: removeRepeat,
+    maxArr: maxArr,
+    minArr: minArr,
 }
 
 module.exports = myJS;

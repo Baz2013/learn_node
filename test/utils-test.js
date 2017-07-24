@@ -12,6 +12,8 @@ replaceStr = myjs.replaceStr;
 checkType = myjs.checkType;
 checkPwd = myjs.checkPwd;
 removeRepeat = myjs.removeRepeat;
+minArr = myjs.minArr;
+maxArr = myjs.maxArr;
 
 describe('#hello.js', () => {
 
@@ -152,6 +154,18 @@ describe('#hello.js', () => {
     describe('#removeRepeat()', () => {
         it("removeRepeat(['a', 'a', 'b', 'b', 'c']) should return ['a','b','c']", () => {
             assert.deepEqual(removeRepeat(['a', 'a', 'b', 'b', 'c']), ['a', 'b', 'c']);
+        });
+    });
+
+    describe('#maxArr()', () => {
+        it("maxArr([4,9,19,1,4,6]) should return 19", () => {
+            assert.strictEqual(maxArr([4,9,19,1,4,6]), 19);
+        });
+    });
+
+    describe('#minArr()', () => {
+        it("minArr([4,9,19,1,4,6]) should return 1", () => {
+            assert.strictEqual(minArr([4,9,19,1,4,6]), 1);
         });
     });
 
