@@ -40,6 +40,11 @@ should.js
 
 [正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
 
+[JavaScript中的apply()方法和call()方法使用介绍](http://www.jb51.net/article/30883.htm)
+
+[关于javascript中apply()和call()方法的区别](http://www.cnblogs.com/fighting_cp/archive/2010/09/20/1831844.html)
+
+
 ## 错误及解决
 #### 使用istanbul执行覆盖率测试的时候报错
 ```shell
