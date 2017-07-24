@@ -14,6 +14,8 @@ checkPwd = myjs.checkPwd;
 removeRepeat = myjs.removeRepeat;
 minArr = myjs.minArr;
 maxArr = myjs.maxArr;
+averageArr = myjs.averageArr;
+sumArr = myjs.sumArr;
 
 describe('#hello.js', () => {
 
@@ -166,6 +168,18 @@ describe('#hello.js', () => {
     describe('#minArr()', () => {
         it("minArr([4,9,19,1,4,6]) should return 1", () => {
             assert.strictEqual(minArr([4,9,19,1,4,6]), 1);
+        });
+    });
+
+    describe('#sumArr()', () => {
+        it("sumArr([3,9,19,1,4,6]) should return 42", () => {
+            assert.strictEqual(sumArr([3,9,19,1,4,6]), 42);
+        });
+    });
+
+    describe('#averageArr()', () => {
+        it("averageArr([3,9,19,1,4,6]) should return 7", () => {
+            assert.strictEqual(averageArr([3,9,19,1,4,6]), 7);
         });
     });
 

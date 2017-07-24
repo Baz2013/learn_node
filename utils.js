@@ -195,6 +195,28 @@ function minArr(arr){
     return Math.min.apply(null, arr);
 }
 
+/**
+ * 数组求和
+ * @param {*} arr 
+ */
+function sumArr(arr){
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+
+    return sum;
+}
+
+/**
+ * 求数组平均数
+ * @param {*} arr 
+ */
+function averageArr(arr){
+    let sum = sumArr(arr);
+    return sum / arr.length;
+}
+
 let myJS = {
     sum: sum,
     trim: trim,
@@ -207,6 +229,8 @@ let myJS = {
     removeRepeat: removeRepeat,
     maxArr: maxArr,
     minArr: minArr,
+    sumArr: sumArr,
+    averageArr: averageArr,
 }
 
 module.exports = myJS;
