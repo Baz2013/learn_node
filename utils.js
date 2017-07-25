@@ -235,6 +235,15 @@ function getEleCnt(obj, ele){
     return num;
 }
 
+function getCount(arr, rank, rankType){
+    let obj = {};
+    let k, arr = [];
+
+    for (let i = 0; i < arr.length; i++){
+        
+    }
+}
+
 let myJS = {
     sum: sum,
     trim: trim,
