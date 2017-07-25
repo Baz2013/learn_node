@@ -218,7 +218,21 @@ function averageArr(arr){
 }
 
 function randomOne(arr){
-    return arr[Math.floor(Math.random()*arr.length)];
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+/**
+ * 返回数组(字符串)中一个元素出现的次数
+ */
+function getEleCnt(obj, ele){
+    let num = 0;
+    for( let i = 0; i < obj.length; i++){
+        if (ele === obj[i]){
+            num++;
+        }
+    }
+
+    return num;
 }
 
 let myJS = {
@@ -236,6 +250,7 @@ let myJS = {
     sumArr: sumArr,
     averageArr: averageArr,
     randomOne: randomOne,
+    getEleCnt: getEleCnt,
 }
 
 module.exports = myJS;

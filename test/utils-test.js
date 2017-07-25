@@ -19,6 +19,7 @@ maxArr = myjs.maxArr;
 averageArr = myjs.averageArr;
 sumArr = myjs.sumArr;
 randomOne = myjs.randomOne;
+getEleCnt = myjs.getEleCnt;
 
 describe('#hello.js', () => {
 
@@ -190,6 +191,21 @@ describe('#hello.js', () => {
         it("randomOne([3,9,19,1,4,6]) should return 7", () => {
             let t = randomOne([3,9,19,1,4,6]);
             [3,9,19,1,4,6].should.containEql(t);
+        });
+    });
+
+    describe('#getEleCnt()', () => {
+        it("getEleCnt([4,9,19,1,4,6], 4) should return 2", () => {
+            let t = getEleCnt([4,9,19,1,4,6], 4);
+            t.should.equal(2);
+        });
+        it("getEleCnt([4,9,19,1,4,6], 5) should return 0", () => {
+            let t = getEleCnt([4,9,19,1,4,6], 5);
+            t.should.equal(0);
+        });
+        it("getEleCnt('abcddefdd', 'd') should return 4", () => {
+            let t = getEleCnt('abcddefdd', 'd');
+            t.should.equal(4);
         });
     });
 
