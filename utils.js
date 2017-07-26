@@ -235,14 +235,44 @@ function getEleCnt(obj, ele){
     return num;
 }
 
+/**
+ *  返回数组(字符串)中出现最多的元素和出现的次数
+ * @param {*} arr 
+ * @param {*} rank 
+ * @param {*} rankType 
+ */
 function getCount(arr, rank, rankType){
     let obj = {};
-    let k, arr = [];
+    let k, arr1 = [];
 
     for (let i = 0; i < arr.length; i++){
-        
+        k = arr[i];
+        if (obj[k]) {
+            obj[k]++;
+        }
+        else{
+            obj[k] = 1;
+        }
     }
+
+    // 保存结果 {el-元素, count-出现次数}
+    for ( let o in obj){
+        arr1.push({el: o, count: obj[o]});
+    }
+
+    //排序(降序)
+    arr1.sort((n1, n2) => {
+        return n2.count - n1.count;
+    });
+
+    if (rankType === 1){
+        arr1 = arr1.reverse();
+    }
+    let rank1 = rank || arr1.length;
+
+    return arr1.slice(0, rank1);
 }
+
 
 let myJS = {
     sum: sum,
@@ -260,6 +290,7 @@ let myJS = {
     averageArr: averageArr,
     randomOne: randomOne,
     getEleCnt: getEleCnt,
+    getCount: getCount,
 }
 
 module.exports = myJS;

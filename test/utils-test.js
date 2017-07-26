@@ -20,6 +20,7 @@ averageArr = myjs.averageArr;
 sumArr = myjs.sumArr;
 randomOne = myjs.randomOne;
 getEleCnt = myjs.getEleCnt;
+getCount = myjs.getCount;
 
 describe('#hello.js', () => {
 
@@ -206,6 +207,13 @@ describe('#hello.js', () => {
         it("getEleCnt('abcddefdd', 'd') should return 4", () => {
             let t = getEleCnt('abcddefdd', 'd');
             t.should.equal(4);
+        });
+    });
+
+    describe('#getCount()', () => {
+        it("getCount([4,9,9,1,4,6], 2) should return  [ { el: '4', count: 2 }, { el: '9', count: 2 } ]", () => {
+            let t = getCount([4,9,9,1,4,6], 2);
+             [ { el: '4', count: 2 }, { el: '9', count: 2 } ].should.containEql(t);
         });
     });
 
