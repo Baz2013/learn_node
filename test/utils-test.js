@@ -21,6 +21,7 @@ sumArr = myjs.sumArr;
 randomOne = myjs.randomOne;
 getEleCnt = myjs.getEleCnt;
 getCount = myjs.getCount;
+getSubArr = myjs.getSubArr;
 
 describe('#hello.js', () => {
 
@@ -213,8 +214,28 @@ describe('#hello.js', () => {
     describe('#getCount()', () => {
         it("getCount([4,9,9,1,4,6], 2) should return  [ { el: '4', count: 2 }, { el: '9', count: 2 } ]", () => {
             let t = getCount([4,9,9,1,4,6], 2);
-             [ { el: '4', count: 2 }, { el: '9', count: 2 } ].should.containEql(t);
+            //  [ { el: '4', count: 2 }, { el: '9', count: 2 } ].should.containEql(t);
+             t_arr = []
+             for ( let i = 0; i < t.length; i++){
+                 obj = t[i];
+                 t_arr.push(obj['el']);
+             }
+             assert.deepEqual(['4', '9'], t_arr);
         });
     });
+
+    describe('#getSubArr()', () => {
+        it("getSubArr([3,9,19,1,4,6], 2) should return [19,1,4,6]", () => {
+            assert.deepEqual(getSubArr([3,9,19,1,4,6], 2), [19,1,4,6]);
+        });
+        it("getSubArr([3,9,19,1,4,6], 2, 1) should return []", () => {
+            assert.deepEqual(getSubArr([3,9,19,1,4,6], 2, 1), []);
+        });
+        it("getSubArr([3,9,19,1,4,6], 2, 10) should return [19,1,4,6]", () => {
+            assert.deepEqual(getSubArr([3,9,19,1,4,6], 2, 10), [19,1,4,6]);
+        });
+    });
+
+    
 
 });

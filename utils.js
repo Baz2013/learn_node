@@ -273,6 +273,25 @@ function getCount(arr, rank, rankType){
     return arr1.slice(0, rank1);
 }
 
+/**
+ * 得到n1 - n2 下标的数组
+ * @param {*} arr 
+ * @param {*} n1 
+ * @param {*} n2 
+ */
+function getSubArr(arr, n1, n2){
+    let arr1 = [];
+    let end = n2 || arr.length - 1;
+    if (n2 > arr.length - 1){
+        end = arr.length - 1;
+    }
+    for ( let i = n1; i <= end; i++){
+        arr1.push(arr[i]);
+    }
+
+    return arr1;
+}
+
 
 let myJS = {
     sum: sum,
@@ -291,6 +310,7 @@ let myJS = {
     randomOne: randomOne,
     getEleCnt: getEleCnt,
     getCount: getCount,
+    getSubArr: getSubArr,
 }
 
 module.exports = myJS;
